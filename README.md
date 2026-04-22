@@ -1,17 +1,14 @@
 # Riichi Mahjong score
 
-Live site: **https://kyleAlexandad.github.io/riichiMahjong_cal/** (after the steps below).
+Live site: **https://kyleAlexandad.github.io/riichiMahjong_cal/** (after Pages workflow succeeds).
 
-## GitHub Pages (fix 404)
+## Deploy (GitHub Actions source)
 
-The workflow publishes the built site to the **`gh-pages`** branch. You must point Pages at that branch:
+1. Push the `main` (or `master`) branch to [kyleAlexandad/riichiMahjong_cal](https://github.com/kyleAlexandad/riichiMahjong_cal).
+2. In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+3. Wait for the **Deploy to GitHub Pages** workflow to finish (green) on the **Actions** tab.
 
-1. **Settings → Pages → Build and deployment**
-2. **Source: Deploy from a branch** (not “GitHub Actions”).
-3. **Branch:** `gh-pages`, **folder:** `/ (root)` → Save.
-4. Wait for the **Deploy to GitHub Pages** workflow to finish (green) on the **Actions** tab, then refresh the live URL.
-
-If you only see a 404, you were still on “GitHub Actions” as the source while no artifact was being published; switching to **`gh-pages`** fixes that for this setup.
+If you still see 404, check whether the workflow needs one-time environment approval (`github-pages`), then rerun it.
 
 ## Local
 
@@ -26,7 +23,7 @@ Production build (same base as GitHub Pages):
 npm run build:gh
 ```
 
-Manual deploy to `gh-pages` branch (optional if you do not use Actions):
+Manual deploy to `gh-pages` branch (optional fallback):
 
 ```bash
 npm run deploy
