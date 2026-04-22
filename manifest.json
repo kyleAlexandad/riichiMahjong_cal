@@ -1,0 +1,17 @@
+{
+  "name": "Riichi Mahjong Scorer",
+  "short_name": "Riichi",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f1419",
+  "theme_color": "#0f1419",
+  "description": "Riichi Mahjong score calculator",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
